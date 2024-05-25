@@ -8,13 +8,13 @@ jobs:
     strategy:
         fail-fast: false
         matrix:
-            os: [macos-12]
+            os: [macos-latest]
             build_type: ['release']
             run-config:
-                - { xcode_version: '13.4.1', simulator: 'name=iPhone 13 Pro' }
                 - { xcode_version: '14.0.1', simulator: 'name=iPhone 14 Pro' }
-                - { xcode_version: '14.1', simulator: 'name=iPhone 14 Pro' }
                 - { xcode_version: '14.2', simulator: 'name=iPhone 14 Pro' }
+                - { xcode_version: '15.0.1', simulator: 'name=iPhone 15 Pro' }
+                - { xcode_version: '15.4', simulator: 'name=iPhone 15 Pro' }
 
     runs-on: ${{ matrix.os }}
     env:
