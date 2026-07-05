@@ -18,7 +18,18 @@ A command line tool which gives you a comprehensive analysis of your codebase in
 </p>
 
 ## Installation
-### Option 1 (via [Mint](https://github.com/yonaskolb/Mint))
+### Option 1 (via [Homebrew](https://brew.sh))
+```sh
+brew install kikeenrique/tap/go-swifty
+```
+
+Alternatively, you can tap the repository first:
+```sh
+brew tap kikeenrique/tap
+brew install go-swifty
+```
+
+### Option 2 (via [Mint](https://github.com/yonaskolb/Mint))
 1. Install Mint via Homebrew:
 ```sh
 brew install mint
@@ -34,7 +45,7 @@ swift run mint install yonaskolb/mint
 mint install rsrbk/GoSwifty
 ```
 If you are receiving a permission error, try to find the command under `sudo` or refer to this [issue](https://github.com/yonaskolb/Mint/issues/188).
-### Option 2 (manually)
+### Option 3 (manually)
 1. Clone the repo:
 ```sh
 git clone https://github.com/rsrbk/GoSwifty.git
