@@ -8,12 +8,11 @@ jobs:
     strategy:
         fail-fast: false
         matrix:
-            os: [macos-latest]
+            os: [macos-26]
             build_type: ['release']
             run-config:
-                - { xcode_version: '14.3.1', simulator: 'name=iPhone 14 Pro' }
-                - { xcode_version: '15.0.1', simulator: 'name=iPhone 15 Pro' }
-                - { xcode_version: '15.4', simulator: 'name=iPhone 15 Pro' }
+                - { xcode_version: '26.2', simulator: 'name=iPhone 17 Pro,OS=26.2' }
+                - { xcode_version: '26.6', simulator: 'name=iPhone 17 Pro,OS=26.5' }
 
     runs-on: ${{ matrix.os }}
     env:
@@ -23,7 +22,7 @@ jobs:
         - uses: actions/checkout@v4
 
         - name: Cache Swift Package Manager
-          uses: actions/cache@v4
+          uses: actions/cache@v6
           with:
             path: |
               .build/checkouts
